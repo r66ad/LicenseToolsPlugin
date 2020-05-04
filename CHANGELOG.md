@@ -1,5 +1,10 @@
 Change Log
 ==========
+Version 1.2.3 *(2020-05-04)*
+----------------------------
+
+- Show more Information on NotEnoughInformationException
+
 
 Version 1.2.2 *(2020-03-19)*
 ----------------------------

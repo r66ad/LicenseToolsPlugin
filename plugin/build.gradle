@@ -25,6 +25,7 @@ gradlePlugin {
 }
 
 apply plugin: 'maven'
+apply plugin: 'maven-publish'
 
 archivesBaseName = 'license-tools'
 group = 'com.cookpad.android.plugin'

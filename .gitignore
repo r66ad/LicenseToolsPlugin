@@ -12,5 +12,5 @@
 /captures
 .externalNativeBuild
 .cxx
-
+.idea/
 app/src/main/assets/licenses.html

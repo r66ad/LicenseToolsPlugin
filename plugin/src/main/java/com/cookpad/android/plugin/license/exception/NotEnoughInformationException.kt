@@ -5,4 +5,6 @@ package com.cookpad.android.plugin.license.exception
 
 import com.cookpad.android.plugin.license.data.LibraryInfo
 
-class NotEnoughInformationException(val libraryInfo: LibraryInfo) : RuntimeException()
+class NotEnoughInformationException(val libraryInfo: LibraryInfo) : RuntimeException(
+        "PleaseExtend licenses.yml, missing information in:\n " +
+        libraryInfo.artifactId + "\n<"+libraryInfo.license+">\n Holder: " + libraryInfo.copyrightHolder)
