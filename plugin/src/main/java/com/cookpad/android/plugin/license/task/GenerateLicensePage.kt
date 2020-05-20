@@ -10,6 +10,7 @@ import com.cookpad.android.plugin.license.extension.writeLicenseHtml
 import com.cookpad.android.plugin.license.util.YamlUtils
 import org.gradle.api.Project
 import org.gradle.api.Task
+import org.gradle.api.logging.LogLevel
 import org.gradle.internal.impldep.com.google.common.annotations.VisibleForTesting
 
 object GenerateLicensePage {
@@ -18,6 +19,8 @@ object GenerateLicensePage {
             val ext = project.extensions.getByType(LicenseToolsPluginExtension::class.java)
             val yamlInfoList = YamlUtils.loadToLibraryInfo(project.file(ext.licensesYaml))
             project.writeLicenseHtml(yamlInfoList.toHtml())
+            project.logger.quiet( "File successfully generated:\n" +
+                    "${project.projectDir.canonicalPath}/${ext.assetsDir}/${ext.outputHtml}")
         }
     }
 
