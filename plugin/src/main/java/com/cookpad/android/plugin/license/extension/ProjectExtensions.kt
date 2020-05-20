@@ -10,12 +10,19 @@ fun Project.toFormattedText(): String {
     return "$group:$name:$version"
 }
 
-fun Project.writeLicenseHtml(html: String) {
+fun Project.writeLicenseHtml(html: String, withCss: Boolean = true) {
     val ext = extensions.getByType(LicenseToolsPluginExtension::class.java)
     val assetsDir = file("src/main/assets")
     assetsDir.mkdirs()
     logger.info("render $assetsDir/${ext.outputHtml}")
     file("$assetsDir/${ext.outputHtml}").writeText(html)
+}
+fun Project.writeLicenseCss(css: String) {
+    val ext = extensions.getByType(LicenseToolsPluginExtension::class.java)
+    val assetsDir = file("src/main/assets")
+    assetsDir.mkdirs()
+    logger.info("render $assetsDir/${ext.outputHtml}")
+    file("$assetsDir/${ext.outputCss}").writeText(css)
 }
 
 fun Project.writeLicenseJson(json: String) {

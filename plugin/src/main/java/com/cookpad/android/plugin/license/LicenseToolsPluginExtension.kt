@@ -6,6 +6,8 @@ package com.cookpad.android.plugin.license
 open class LicenseToolsPluginExtension {
     var outputHtml: String = "licenses.html"
 
+    var outputCss: String = "licenses.css"
+
     var outputJson: String = "licenses.json"
 
     var licensesYaml: String = "licenses.yml"

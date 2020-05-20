@@ -54,6 +54,18 @@ object Templates {
             )
         }
     }
+    fun cssTemplate(content: CharSequence = ""): String {
+        val templateCssFile = "template/layout.css"
+        val map = LinkedHashMap<String, String>(1)
+        map["content"] =
+            makeIndent(content, 4)
+        return templateEngine.createTemplate(
+            readResourceContent(
+                templateCssFile
+            )
+        ).make(map).toString()
+
+    }
 
     fun wrapWithLayout(content: CharSequence): String {
         val templateFile = "template/layout.html"

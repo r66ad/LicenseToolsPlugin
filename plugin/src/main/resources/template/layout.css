@@ -1,0 +1,82 @@
+body {
+color: #4c4a40;
+font-size: 87.5%;
+}
+.header, .library {
+margin: 1em 0;
+padding: 0 0.5em;
+border-bottom: 1px solid #ebeae6;
+}
+.title {
+font-size: 129%;
+font-weight: bold;
+margin: 1em 0
+}
+.licensetxt {
+background-color: #f7f7f9;
+border-radius: 4px;
+border: 1px solid #e1e1e8;
+font-size: 80%;
+padding: 9px 14px;
+margin-bottom: 14px;
+}
+.licensetxt h1, .licensetxt h2 {
+font-size: 100%;
+font-weight: bold;
+}
+.licensetxt .inline {
+display: inline;
+}
+.licensetxt .block {
+margin: 1em 0;
+}
+.licensetxt pre {
+white-space: pre-wrap;
+}
+.licensetxt .low-alpha {
+list-style-type: lower-alpha;
+padding-left: 2em;
+}
+input.chkbox ~ .licensetxt {
+max-height: 200px;
+overflow: hidden;
+}
+input.chkbox, label.labelpm, label.labelpm::before {
+background-color: #f7f7f9 !important;
+position: absolute !important;
+right: 86px !important;
+width: 20px !important;
+height: 20px !important ;
+margin: 10px 20px 0 0 !important;
+padding: 0px !important;
+color: white !important;
+border-radius:0 !important;
+border: 0px !important;
+}
+input.chkbox {
+margin-top: 25px !important;
+opacity: 0;
+z-index: 1;
+/*    -webkit-appearance: checkbox;*/
+}
+label.labelpm {
+text-align: center;
+font-weight: bold;
+}
+label:focus, input:focus {
+    outline: none !important;
+}
+
+label.labelpm::before {
+color: black !important;
+background-color: #f7f7f9 !important;
+content: "+" !important;
+}
+input.chkbox:checked + .labelpm::before {
+background-color: #f7f7f9 !important;
+color: black !important;
+content: "-" !important;
+}
+input.chkbox:checked ~ .licensetxt {
+max-height: none;
+}
