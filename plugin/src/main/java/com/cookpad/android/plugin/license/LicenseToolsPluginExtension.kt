@@ -8,6 +8,8 @@ open class LicenseToolsPluginExtension {
 
     var outputCss: String = "licenses.css"
 
+    var assetsDir: String = "src/main/assets"
+
     var outputJson: String = "licenses.json"
 
     var licensesYaml: String = "licenses.yml"

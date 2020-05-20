@@ -5,6 +5,7 @@ package com.cookpad.android.plugin.license.extension
 
 import com.cookpad.android.plugin.license.LicenseToolsPluginExtension
 import org.gradle.api.Project
+import org.gradle.api.logging.LogLevel
 
 fun Project.toFormattedText(): String {
     return "$group:$name:$version"
@@ -12,9 +13,9 @@ fun Project.toFormattedText(): String {
 
 fun Project.writeLicenseHtml(html: String, withCss: Boolean = true) {
     val ext = extensions.getByType(LicenseToolsPluginExtension::class.java)
-    val assetsDir = file("src/main/assets")
+    val assetsDir = file(ext.assetsDir)
     assetsDir.mkdirs()
-    logger.info("render $assetsDir/${ext.outputHtml}")
+    logger.info( "render $assetsDir/${ext.outputHtml}")
     file("$assetsDir/${ext.outputHtml}").writeText(html)
 }
 fun Project.writeLicenseCss(css: String) {
@@ -27,7 +28,7 @@ fun Project.writeLicenseCss(css: String) {
 
 fun Project.writeLicenseJson(json: String) {
     val ext = extensions.getByType(LicenseToolsPluginExtension::class.java)
-    val assetsDir = file("src/main/assets")
+    val assetsDir = file(ext.assetsDir)
     assetsDir.mkdirs()
     logger.info("render $assetsDir/${ext.outputJson}")
     file("$assetsDir/${ext.outputJson}").writeText(json)
