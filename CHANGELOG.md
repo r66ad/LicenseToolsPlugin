@@ -4,7 +4,7 @@ Version 1.2.3 *(2020-05-04)*
 ----------------------------
 
 - Show more Information on NotEnoughInformationException
-
+- Task to generate page for orchid plugins with compatible css and extension configuration option for orchid paths
 
 Version 1.2.2 *(2020-03-19)*
 ----------------------------
