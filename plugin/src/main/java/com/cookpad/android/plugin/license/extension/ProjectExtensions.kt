@@ -20,7 +20,7 @@ fun Project.writeLicenseHtml(html: String, withCss: Boolean = true) {
 }
 fun Project.writeLicenseCss(css: String) {
     val ext = extensions.getByType(LicenseToolsPluginExtension::class.java)
-    val assetsDir = file("src/main/assets")
+    val assetsDir = file(ext.assetsDir)
     assetsDir.mkdirs()
     logger.info("render $assetsDir/${ext.outputHtml}")
     file("$assetsDir/${ext.outputCss}").writeText(css)

@@ -20,6 +20,9 @@ object GenerateOrchidLicensePage {
             val yamlInfoList = YamlUtils.loadToLibraryInfo(project.file(ext.licensesYaml))
             project.writeLicenseHtml(yamlInfoList.toHtml())
             project.writeLicenseCss(Templates.cssTemplate())
+            project.logger.quiet( "File successfully generated:\n" +
+                    "${project.projectDir.canonicalPath}/${ext.assetsDir}/${ext.outputHtml}" +
+                    "${project.projectDir.canonicalPath}/${ext.assetsDir}/${ext.outputCss}")
         }
     }
 

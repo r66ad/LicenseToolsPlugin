@@ -163,7 +163,7 @@ object CheckLicenses {
         val pomStream: File
         try {
             pomConfiguration.resolve().forEach { file ->
-                project.logger.info("POM: $file")
+                project.logger.quiet("POM: $file")
             }
             pomStream = pomConfiguration.resolve().toList().first()
         } catch (e: Exception) {
@@ -221,5 +221,5 @@ object CheckLicenses {
     }
 
     private val dependencyKeywordPattern =
-        """^(?!releaseUnitTest)(?:release\w*)?([cC]ompile|[cC]ompileOnly|[iI]mplementation|[aA]pi)$""".toRegex()
+        """^(?!releaseUnitTest)(?:release\w*)?([cC]ompile|[cC]ompileOnly|[iI]mplementation|[aA]pi|[sS]dk)$""".toRegex()
 }

@@ -94,6 +94,10 @@ This plugin does not provide `Activity` nor `Fragment` to show `licenses.html`. 
 
 `example/MainActivity` is an example.
 
+### Generate `licenses.html` and `licenses.css` by the `generateOrchidLicensePage` task
+
+`./gradlew generateOrchidLicensePage` generates `licenses.html` and `css` according to `assetsDir` setting.
+
 ### Configuring the plugin
 
 Use `licenseTools` in your build.gradle to add some optional configuration.
