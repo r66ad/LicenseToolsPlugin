@@ -106,7 +106,7 @@ object CheckLicenses {
         val text = StringBuffer()
         text.append("- artifact: ${libraryInfo.artifactId.withWildcardVersion()}\n")
         text.append("  name: ${libraryInfo.name ?: "#NAME#"}\n")
-        text.append("  copyrightHolder: ${libraryInfo.copyrightHolder ?: "#COPYRIGHT_HOLDER#"}\n")
+        text.append("  copyrightHolder: ${libraryInfo.copyrightHolder ?: "UNKNOWN"}\n")
         text.append("  license: ${libraryInfo.license ?: "#LICENSE#"}\n")
         if (libraryInfo.licenseUrl?.isNotBlank() == true) {
             text.append("  licenseUrl: ${libraryInfo.licenseUrl}\n")
@@ -163,7 +163,7 @@ object CheckLicenses {
         val pomStream: File
         try {
             pomConfiguration.resolve().forEach { file ->
-                project.logger.quiet("POM: $file")
+                project.logger.info("POM: $file")
             }
             pomStream = pomConfiguration.resolve().toList().first()
         } catch (e: Exception) {
