@@ -3,8 +3,8 @@
   <h1 class="title">${library.name}</h1>
   <p class="notice">${library.copyrightStatement.replaceAll("\n", "<br/>")}</p>
   <% print library.url == null || library.url.isEmpty() ? "" : """<p><a href="${library.url}">${library.url}</a></p>""" %>
-  <input type="checkbox"><label></label>
-  <div class="license">
+  <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+  <div class="licensetxt">
     <p>GNU Lesser General Public License<br />
       Version 2.1, February 1999</p>
 

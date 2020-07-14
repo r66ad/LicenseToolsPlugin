@@ -18,7 +18,7 @@
     font-weight: bold;
     margin: 1em 0
     }
-    .license {
+    .licensetxt {
     background-color: #f7f7f9;
     border-radius: 4px;
     border: 1px solid #e1e1e8;
@@ -26,50 +26,64 @@
     padding: 9px 14px;
     margin-bottom: 14px;
     }
-    .license h1, .license h2 {
+    .licensetxt h1, .licensetxt h2 {
     font-size: 100%;
     font-weight: bold;
     }
-    .license .inline {
+    .licensetxt .inline {
     display: inline;
     }
-    .license .block {
+    .licensetxt .block {
     margin: 1em 0;
     }
-    .license pre {
+    .licensetxt pre {
     white-space: pre-wrap;
     }
-    .license .low-alpha {
+    .licensetxt .low-alpha {
     list-style-type: lower-alpha;
     padding-left: 2em;
     }
-    input ~ .license {
+    input.chkbox ~ .licensetxt {
     max-height: 200px;
     overflow: hidden;
     }
-    input, label {
-    position: absolute;
-    right: 16px;
-    width: 12px;
-    height: 12px;
-    margin: 20px;
+    input.chkbox, label.labelpm, label.labelpm::before {
+    background-color: #f7f7f9 !important;
+    position: absolute !important;
+    right: 86px !important;
+    width: 20px !important;
+    height: 20px !important ;
+    margin: 10px 20px 0 0 !important;
+    padding: 0px !important;
+    color: white !important;
+    border-radius:0 !important;
+    border: 0px !important;
     }
-    input {
+    input.chkbox {
+    margin-top: 25px !important;
     opacity: 0;
     z-index: 1;
+    /*    -webkit-appearance: checkbox;*/
     }
-    label {
-    margin-top: 16px;
+    label.labelpm {
     text-align: center;
     font-weight: bold;
     }
-    label::before {
-    content: "+";
+    label:focus, input:focus {
+        outline: none !important;
     }
-    input:checked + label::before {
-    content: "-";
+
+    label.labelpm::before {
+    color: black !important;
+    background-color: #f7f7f9 !important;
+    content: "+" !important;
     }
-    input:checked ~ .license {
+    input.chkbox:checked + .labelpm::before {
+    background-color: #f7f7f9 !important;
+    color: black !important;
+    content: "-" !important;
+    }
+    input.chkbox:checked ~ .licensetxt {
     max-height: none;
     }
   </style>
@@ -80,8 +94,8 @@
        <h1 class="title">activity-ktx</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/jetpack/androidx">https://developer.android.com/jetpack/androidx</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -327,8 +341,8 @@
        <h1 class="title">activity</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/jetpack/androidx">https://developer.android.com/jetpack/androidx</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -574,8 +588,8 @@
        <h1 class="title">annotation</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -821,8 +835,8 @@
        <h1 class="title">appcompat-resources</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/jetpack/androidx">https://developer.android.com/jetpack/androidx</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -1068,8 +1082,8 @@
        <h1 class="title">appcompat</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/jetpack/androidx">https://developer.android.com/jetpack/androidx</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -1315,8 +1329,8 @@
        <h1 class="title">core-common</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -1562,8 +1576,8 @@
        <h1 class="title">core-runtime</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -1809,8 +1823,8 @@
        <h1 class="title">asynclayoutinflater</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -2056,8 +2070,8 @@
        <h1 class="title">cardview</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -2303,8 +2317,8 @@
        <h1 class="title">collection</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -2550,8 +2564,8 @@
        <h1 class="title">constraintlayout-solver</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://tools.android.com">http://tools.android.com</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -2797,8 +2811,8 @@
        <h1 class="title">constraintlayout</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://tools.android.com">http://tools.android.com</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -3044,8 +3058,8 @@
        <h1 class="title">coordinatorlayout</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -3291,8 +3305,8 @@
        <h1 class="title">core-ktx</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -3538,8 +3552,8 @@
        <h1 class="title">core</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -3785,8 +3799,8 @@
        <h1 class="title">cursoradapter</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -4032,8 +4046,8 @@
        <h1 class="title">customview</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -4279,8 +4293,8 @@
        <h1 class="title">documentfile</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -4526,8 +4540,8 @@
        <h1 class="title">drawerlayout</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -4773,8 +4787,8 @@
        <h1 class="title">fragment-ktx</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/jetpack/androidx">https://developer.android.com/jetpack/androidx</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -5020,8 +5034,8 @@
        <h1 class="title">fragment</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/jetpack/androidx">https://developer.android.com/jetpack/androidx</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -5267,8 +5281,8 @@
        <h1 class="title">interpolator</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -5514,8 +5528,8 @@
        <h1 class="title">legacy-support-core-ui</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -5761,8 +5775,8 @@
        <h1 class="title">legacy-support-core-utils</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -6008,8 +6022,8 @@
        <h1 class="title">legacy-support-v4</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -6255,8 +6269,8 @@
        <h1 class="title">lifecycle-common</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -6502,8 +6516,8 @@
        <h1 class="title">lifecycle-extensions</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -6749,8 +6763,8 @@
        <h1 class="title">lifecycle-livedata-core</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -6996,8 +7010,8 @@
        <h1 class="title">lifecycle-livedata</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -7243,8 +7257,8 @@
        <h1 class="title">lifecycle-process</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -7490,8 +7504,8 @@
        <h1 class="title">lifecycle-runtime</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -7737,8 +7751,8 @@
        <h1 class="title">lifecycle-service</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -7984,8 +7998,8 @@
        <h1 class="title">lifecycle-viewmodel-ktx</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -8231,8 +8245,8 @@
        <h1 class="title">lifecycle-viewmodel</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -8478,8 +8492,8 @@
        <h1 class="title">loader</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -8725,8 +8739,8 @@
        <h1 class="title">localbroadcastmanager</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -8972,8 +8986,8 @@
        <h1 class="title">media</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -9219,8 +9233,8 @@
        <h1 class="title">navigation-common-ktx</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -9466,8 +9480,8 @@
        <h1 class="title">navigation-common</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -9713,8 +9727,8 @@
        <h1 class="title">navigation-fragment-ktx</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -9960,8 +9974,8 @@
        <h1 class="title">navigation-fragment</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -10207,8 +10221,8 @@
        <h1 class="title">navigation-runtime-ktx</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -10454,8 +10468,8 @@
        <h1 class="title">navigation-runtime</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -10701,8 +10715,8 @@
        <h1 class="title">navigation-ui-ktx</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -10948,8 +10962,8 @@
        <h1 class="title">navigation-ui</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/topic/libraries/architecture/index.html">https://developer.android.com/topic/libraries/architecture/index.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -11195,8 +11209,8 @@
        <h1 class="title">print</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -11442,8 +11456,8 @@
        <h1 class="title">recyclerview</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -11689,8 +11703,8 @@
        <h1 class="title">savedstate</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/jetpack/androidx">https://developer.android.com/jetpack/androidx</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -11936,8 +11950,8 @@
        <h1 class="title">slidingpanelayout</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -12183,8 +12197,8 @@
        <h1 class="title">swiperefreshlayout</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -12430,8 +12444,8 @@
        <h1 class="title">transition</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -12677,8 +12691,8 @@
        <h1 class="title">vectordrawable-animated</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/jetpack/androidx">https://developer.android.com/jetpack/androidx</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -12924,8 +12938,8 @@
        <h1 class="title">vectordrawable</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="https://developer.android.com/jetpack/androidx">https://developer.android.com/jetpack/androidx</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -13171,8 +13185,8 @@
        <h1 class="title">versionedparcelable</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -13418,8 +13432,8 @@
        <h1 class="title">viewpager</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -13665,8 +13679,8 @@
        <h1 class="title">material</h1>
        <p class="notice">Copyright &copy; Google Inc. All rights reserved.</p>
        <p><a href="http://developer.android.com/tools/extras/support-library.html">http://developer.android.com/tools/extras/support-library.html</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -13912,8 +13926,8 @@
        <h1 class="title">OkHttp</h1>
        <p class="notice">Copyright &copy; 2019, Square, Inc. All rights reserved.</p>
        <p><a href="https://github.com/square/okhttp">https://github.com/square/okhttp</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -14159,8 +14173,8 @@
        <h1 class="title">kotlin-android-extensions-runtime</h1>
        <p class="notice">Copyright &copy; JetBrains s.r.o. All rights reserved.</p>
        <p><a href="https://kotlinlang.org/">https://kotlinlang.org/</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -14406,8 +14420,8 @@
        <h1 class="title">kotlin-stdlib-common</h1>
        <p class="notice">Copyright &copy; JetBrains s.r.o. All rights reserved.</p>
        <p><a href="https://kotlinlang.org/">https://kotlinlang.org/</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -14653,8 +14667,8 @@
        <h1 class="title">kotlin-stdlib-jdk7</h1>
        <p class="notice">Copyright &copy; JetBrains s.r.o. All rights reserved.</p>
        <p><a href="https://kotlinlang.org/">https://kotlinlang.org/</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -14900,8 +14914,8 @@
        <h1 class="title">kotlin-stdlib</h1>
        <p class="notice">Copyright &copy; JetBrains s.r.o. All rights reserved.</p>
        <p><a href="https://kotlinlang.org/">https://kotlinlang.org/</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -15147,8 +15161,8 @@
        <h1 class="title">kotlinx-coroutines-android</h1>
        <p class="notice">Copyright &copy; JetBrains s.r.o. All rights reserved.</p>
        <p><a href="https://github.com/Kotlin/kotlinx.coroutines">https://github.com/Kotlin/kotlinx.coroutines</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -15394,8 +15408,8 @@
        <h1 class="title">kotlinx-coroutines-core-common</h1>
        <p class="notice">Copyright &copy; JetBrains s.r.o. All rights reserved.</p>
        <p><a href="https://github.com/Kotlin/kotlinx.coroutines">https://github.com/Kotlin/kotlinx.coroutines</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -15641,8 +15655,8 @@
        <h1 class="title">kotlinx-coroutines-core</h1>
        <p class="notice">Copyright &copy; JetBrains s.r.o. All rights reserved.</p>
        <p><a href="https://github.com/Kotlin/kotlinx.coroutines">https://github.com/Kotlin/kotlinx.coroutines</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>
@@ -15888,8 +15902,8 @@
        <h1 class="title">annotations</h1>
        <p class="notice">Copyright &copy; JetBrains s.r.o. All rights reserved.</p>
        <p><a href="http://www.jetbrains.org">http://www.jetbrains.org</a></p>
-       <input type="checkbox"><label></label>
-       <div class="license">
+       <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+       <div class="licensetxt">
          <h2>
            Apache License
            <br/>

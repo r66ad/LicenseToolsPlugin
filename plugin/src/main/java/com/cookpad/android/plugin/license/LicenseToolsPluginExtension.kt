@@ -10,6 +10,12 @@ open class LicenseToolsPluginExtension {
 
     var assetsDir: String = "src/main/assets"
 
+    var withOrchid: Boolean = false
+
+    var withAndroidPage: Boolean = false
+
+    var orchidDir: String = "src/orchid/resources/pages"
+
     var outputJson: String = "licenses.json"
 
     var licensesYaml: String = "licenses.yml"

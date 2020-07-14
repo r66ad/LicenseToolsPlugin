@@ -3,8 +3,8 @@
   <h1 class="title">${library.name}</h1>
   <p class="notice">${library.copyrightStatement.replaceAll("\n", "<br/>")}</p>
   <% print library.url == null || library.url.isEmpty() ? "" : """<p><a href="${library.url}">${library.url}</a></p>""" %>
-  <input type="checkbox"><label></label>
-  <div class="license">
+  <input type="checkbox" class="chkbox" /><label class="labelpm"></label>
+  <div class="licensetxt">
     <h2>Common Public License Version 1.0 (CPL)</h2>
 
     <p><tt>THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS COMMON PUBLIC LICENSE ("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THE PROGRAM CONSTITUTES RECIPIENT'S ACCEPTANCE OF THIS AGREEMENT.</tt></p>
